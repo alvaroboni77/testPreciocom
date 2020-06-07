@@ -26,6 +26,8 @@ var colors = {
 };
 </code>  
 <li>Modifica el código para que las variables rgb y wb mantengan sus valores iniciales y colors tenga los valores de ambas al finalizar la ejecución del script.</li>
+var colors = Object.assign({}, rgb, wb);
+
 <li>Además, tenemos un bug localizado en dispositivos con Internet Explorer… El código de nuestro script no funciona y necesitamos que se ejecute también en este navegador. ¿Sabrías identificar cuál es el problema? ¿Qué solución nos propones?</li>
 
 
