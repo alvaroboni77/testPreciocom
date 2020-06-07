@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row justify-content-center mt-5">
+        <div class="col-auto">
+            <table class="table table-bordered text-center">
+                <thead class="thead-light">
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Created at</th>
+                    <th>Updated at</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.firstName }}</td>
+                        <td>{{ user.lastName }}</td>
+                        <td>{{ user.createdAt|date("H:i:s d/m/Y") }}</td>
+                        <td>{{ user.updatedAt|date("H:i:s d/m/Y") }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
